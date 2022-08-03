@@ -7,13 +7,9 @@ const rutaArticulos = require('./Articulos')
 const rutalistaArticulos = require('./ListaArticulos')
 const authAdministradorMiddleware = require('../middlewares/autorisacionEdicionArticulos');
 
-router.use( '/' , (req , res) => {
-    res.send('seccion api')
-})
-
+router.use( '/login' , rutaLogear );
 router.use( '/registrar' , rutaRegistrar  );
 
-router.use( '/login' , rutaLogear );
 
 
 router.use( '/usuarios' , rutaUsuario);
