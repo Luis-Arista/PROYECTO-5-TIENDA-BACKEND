@@ -1,8 +1,8 @@
+const express = require('express');
 const jwt = require('jsonwebtoken');
 const UserService = require('../service/Usuarios');
 const modeloDeUsuarios = require('../models/Usuarios');
 const autentificacionUsuario = require('../service/auth');
-const express = require('express');
 require('dotenv').config()
 
 const router = express.Router();
@@ -13,7 +13,8 @@ const JWT_SECRET = process.env.JWT_SECRET;
 
 router.post( '/' , async( req , res ) =>{
     const { email , contraseña } = req.body
-
+    res.send( email , contraseña )
+/* 
     try {
         const usuario = await authUsuario.login( email , contraseña);
         const usuarioPermisos = {
@@ -33,7 +34,7 @@ router.post( '/' , async( req , res ) =>{
         res.status(401).send({
             mensaje: error.message
         })
-    }
+    } */
 
  } );
 
