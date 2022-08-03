@@ -4,8 +4,16 @@ const controladorArticulos = require('../Controller/index');
 const { todosLosArticulos } = controladorArticulos;
 
 router.get( '/articulos' , async( req , res ) => {
-    const listaDeArticulos = await todosLosArticulos()
-    res.status(200).send( listaDeArticulos )
+    
+    try{
+        const listaDeArticulos = await todosLosArticulos()
+        res.status(200).send( listaDeArticulos )
+    }catch(Error){
+        res.send({
+            error: Error.message
+        })
+    }
+
 })
  
 
