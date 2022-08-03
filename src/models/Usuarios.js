@@ -28,6 +28,13 @@ const UsuariosEsquema = new Schema({
     role:{
         type: String,
         default: 'Cliente'
+    },
+    favoritos: {
+        type: Object,
+    },
+    carritoCompras: {
+        type: Object,
+
     }
 
 },{

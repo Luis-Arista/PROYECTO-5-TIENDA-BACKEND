@@ -17,7 +17,9 @@ router.get( '/usuario/info' , ( req , res ) => {
         apellido: sessionDeUsuario.apellido,
         email: sessionDeUsuario.email,
         role: sessionDeUsuario.role,
-        id: sessionDeUsuario._id
+        id: sessionDeUsuario._id,
+        favoritos: sessionDeUsuario.favoritos,
+        carritoCompras: sessionDeUsuario.carritoCompras
     })
 })
 
