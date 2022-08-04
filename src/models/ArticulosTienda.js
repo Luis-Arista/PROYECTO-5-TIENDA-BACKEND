@@ -13,8 +13,7 @@ const EsquemaDeArticulos = new Schema({
     },
     precio_con_descuento:{
         required: [true , 'Se require ingrese precio'],
-        type: Number,
-        min: 0
+        type: Number
     },
     descripcion: {
         required: [ true , 'Se require descripcion'],
@@ -26,7 +25,7 @@ const EsquemaDeArticulos = new Schema({
         minlength:[ 1 , 'Se require al menos una categoria']
     },
     ofertas:{
-        type: Bolean
+        type: Boolean
     }
 
 },{
