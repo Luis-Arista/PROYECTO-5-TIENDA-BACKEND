@@ -17,8 +17,8 @@ const eliminarArticulo = ( _id ) => {
     return modeloArticulos.findByIdAndDelete( {_id})
 }
 
-const todosLosArticulos = () => {
-    return modeloArticulos.find({})
+const todosLosArticulos = ( parametro ) => {
+    return modeloArticulos.find(parametro)
 }
 
 module.exports = {
