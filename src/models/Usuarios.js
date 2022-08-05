@@ -30,10 +30,10 @@ const UsuariosEsquema = new Schema({
         default: 'Cliente'
     },
     favoritos: {
-        type: Object,
+        type: Array,
     },
     carritoCompras: {
-        type: Object,
+        type: Array,
 
     }
 
