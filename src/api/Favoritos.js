@@ -3,7 +3,7 @@ const router = express.Router();
 const controladorArticulos = require('../Controller/index');
 const { buscarId } = controladorArticulos;
 
-router.get( '/' , async( req , res ) => {
+router.post( '/' , async( req , res ) => {
      const {id} = req.body
     try{
         const articulo = await buscarId( id )
