@@ -10,6 +10,8 @@ const authAdministradorMiddleware = require('../middlewares/autorisacionEdicionA
 
 router.use( '/login' , rutaLogear );
 router.use( '/registrar' , rutaRegistrar  );
+router.use( '/favoritos' , rutaFavoritos)
+
 
 
 
@@ -22,6 +24,5 @@ router.use(authAdministradorMiddleware);
 
 router.use( '/articulos' , rutaArticulos);
 
-router.use( '/favoritos' , rutaFavoritos)
 
 module.exports = router;
