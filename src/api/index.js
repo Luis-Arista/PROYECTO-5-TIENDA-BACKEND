@@ -5,6 +5,7 @@ const rutaLogear = require('./logearse');
 const rutaUsuario = require('./UsuarioInfo')
 const rutaArticulos = require('./Articulos')
 const rutalistaArticulos = require('./ListaArticulos')
+const rutaFavoritos = require('./Favoritos')
 const authAdministradorMiddleware = require('../middlewares/autorisacionEdicionArticulos');
 
 router.use( '/login' , rutaLogear );
@@ -20,5 +21,7 @@ router.use( '/lista' , rutalistaArticulos);
 router.use(authAdministradorMiddleware);
 
 router.use( '/articulos' , rutaArticulos);
+
+router.use( '/favoritos' , rutaFavoritos)
 
 module.exports = router;
