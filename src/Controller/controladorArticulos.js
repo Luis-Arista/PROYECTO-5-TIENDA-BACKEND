@@ -21,9 +21,14 @@ const todosLosArticulos = ( parametro ) => {
     return modeloArticulos.find(parametro)
 }
 
+const buscarId = ( _id ) => {
+    return modeloArticulos.findById( _id )
+}
+
 module.exports = {
     agregarArticulo,
     editarArticulo,
     eliminarArticulo,
-    todosLosArticulos
+    todosLosArticulos,
+    buscarId
 };
