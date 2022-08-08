@@ -20,7 +20,7 @@ router.use( '/usuarios' , rutaUsuario);
 router.use( '/lista' , rutalistaArticulos);
 
 
-router.use(authAdministradorMiddleware);
+//router.use(authAdministradorMiddleware);
 
 router.use( '/articulos' , rutaArticulos);
 
