@@ -28,7 +28,7 @@ const EsquemaDeArticulos = new Schema({
         type: Boolean
     },
     imagen: {
-        type: String
+        type: String,
         default: 'https://baltrion.es/wp-content/uploads/sin-IMAGEN.jpg'
     }
 
