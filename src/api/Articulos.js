@@ -8,7 +8,7 @@ router.get( '/' , async( req , res ) => {
     const {id} = req.body
     try{
         const articulo = await buscarId( id )
-        res.satus(200).send(articulo)
+        res.status(200).send(articulo)
     }catch(error){
         res.send({
             error,
