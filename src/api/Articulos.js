@@ -1,8 +1,21 @@
 const express = require('express');
 const router = express.Router();
 const controladorArticulos = require('../Controller/index');
-const { agregarArticulo , editarArticulo , eliminarArticulo } = controladorArticulos;
+const { buscarId , agregarArticulo , editarArticulo , eliminarArticulo } = controladorArticulos;
 
+
+router.get( '/' , async( req , res ) => {
+    const {id} = req.body
+    try{
+        const articulo = await buscarId( id )
+        res.satus(200).send(articulo)
+    }catch(error){
+        res.send({
+            error,
+            mensaje: error.message
+        })
+    }
+})
 
 router.post( '/' , async( req , res ) => {
     body = req.body;
