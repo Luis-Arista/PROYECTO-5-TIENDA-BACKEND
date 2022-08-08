@@ -4,7 +4,7 @@ const controladorArticulos = require('../Controller/index');
 const { buscarId , agregarArticulo , editarArticulo , eliminarArticulo } = controladorArticulos;
 
 
-router.get( '/' , async( req , res ) => {
+router.post( '/articulo' , async( req , res ) => {
     const {id} = req.body
     try{
         const articulo = await buscarId( id )
