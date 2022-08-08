@@ -22,7 +22,7 @@ const todosLosArticulos = ( parametro ) => {
 }
 
 const buscarId = ( _id ) => {
-    return modeloArticulos.findById({ _id} )
+    return modeloArticulos.findById( _id )
 }
 
 module.exports = {
