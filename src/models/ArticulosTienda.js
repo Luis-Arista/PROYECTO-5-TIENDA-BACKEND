@@ -26,6 +26,10 @@ const EsquemaDeArticulos = new Schema({
     },
     ofertas:{
         type: Boolean
+    },
+    imagen: {
+        type: String
+        default: 'https://baltrion.es/wp-content/uploads/sin-IMAGEN.jpg'
     }
 
 },{
