@@ -1,8 +1,24 @@
 const express = require('express');
 const router = express.Router();
 const controladorArticulos = require('../Controller/index');
-const { buscarId , agregarArticulo , editarArticulo , eliminarArticulo } = controladorArticulos;
+const {todosLosArticulos , buscarId , agregarArticulo , editarArticulo , eliminarArticulo } = controladorArticulos;
 
+
+router.post( '/lista' , async( req , res) => {
+    const parametro = req.body
+
+    try{
+        const lista = await todosLosArticulos( parametro )
+        res.status(200).send( lista )
+
+
+    }catch(error){
+        res.status(403).send({
+            mensaje: error.message
+        })
+    }
+
+})
 
 router.post( '/articulo' , async( req , res ) => {
     const {id} = req.body
