@@ -6,7 +6,6 @@ const {editarFavoritos} = controladorusuario
 
 router.patch( '/:id' , async( req , res ) => {
     const { id } = req.params
-    console.log(id)
     const body = req.body
     const usuario = await editarFavoritos( id , body)
 
