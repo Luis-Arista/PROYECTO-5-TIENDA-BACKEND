@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const controladorArticulos = require('../Controller/index');
+const {controladorArticulos} = require('../Controller/index');
 const {todosLosArticulos , buscarId , agregarArticulo , editarArticulo , eliminarArticulo } = controladorArticulos;
 
 

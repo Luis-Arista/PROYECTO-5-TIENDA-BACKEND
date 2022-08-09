@@ -4,7 +4,6 @@ const rutaRegistrar = require('./registrar')
 const rutaLogear = require('./logearse');
 const rutaUsuario = require('./UsuarioInfo')
 const rutaArticulos = require('./Articulos')
-const rutalistaArticulos = require('./ListaArticulos')
 const rutaFavoritos = require('./Favoritos')
 const authAdministradorMiddleware = require('../middlewares/autorisacionEdicionArticulos');
 
@@ -17,7 +16,7 @@ router.use( '/favoritos' , rutaFavoritos)
 
 router.use( '/usuarios' , rutaUsuario);
 
-router.use( '/lista' , rutalistaArticulos);
+
 
 
 //router.use(authAdministradorMiddleware);
