@@ -20,7 +20,7 @@ router.post( '/lista' , async( req , res) => {
 
 })
 
-router.post( '/:id' , async( req , res ) => {
+router.get( '/:id' , async( req , res ) => {
     const {id} = req.params
     try{
         const articulo = await buscarId( id )
