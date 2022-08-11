@@ -11,7 +11,7 @@ app.use( '/api/v1' , rutasApi )
 app.use( '/' , (  req ,res ) => {
     res.status(200).send({
         mensaje : "Backend funcioanndo correctamente",
-        versionContraError: 17
+        versionContraError: 18
     })
 })
 
