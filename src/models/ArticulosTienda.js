@@ -21,8 +21,7 @@ const EsquemaDeArticulos = new Schema({
     },
     categorias: {
         required: [ true , 'Se require al menos una categoria'],
-        type: Array,
-        minlength:[ 1 , 'Se require al menos una categoria']
+        type: String
     },
     ofertas:{
         type: Boolean
