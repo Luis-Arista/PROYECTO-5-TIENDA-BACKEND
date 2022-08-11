@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const controladorCategoria = require('../Controller/index');
+const {controladorCategoria} = require('../Controller/index');
 const { agregarCategoria } = controladorCategoria
 
 router.post( '/' , async( req , res ) => {
