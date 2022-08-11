@@ -6,6 +6,11 @@ const agregarCategoria = async( categoria ) => {
     return nuvaCategoria;
 };
 
+const buscarCategoria = ( parametro ) => {
+    return modeloCategoria.find( parametro )
+}
+
 module.exports = {
-    agregarCategoria
+    agregarCategoria,
+    buscarCategoria
 }

@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const {controladorCategoria} = require('../Controller/index');
-const { agregarCategoria } = controladorCategoria
+const { agregarCategoria , buscarCategoria } = controladorCategoria
 
 router.post( '/' , async( req , res ) => {
     const body = req.body
@@ -15,5 +15,17 @@ router.post( '/' , async( req , res ) => {
         });
     };
 } );
+
+router.post( '/buscar' , async(req,res) => {
+    const parametro = req.body
+    try{
+        const lista = await buscarCategoria( parametro );
+        res.status(200).send(lista);
+    }catch(error){
+        res.status(403).send({
+            mensaje: error.message
+        });
+    };
+} )
 
 module.exports = router
