@@ -2,7 +2,8 @@ const express = require('express');
 const router = express.Router();
 const {controladorArticulos} = require('../Controller/index');
 const {todosLosArticulos , buscarId , agregarArticulo , editarArticulo , eliminarArticulo } = controladorArticulos;
-
+const multer = require('multer')
+const upload = multer({dest:'a'})
 
 router.post( '/lista' , async( req , res) => {
     const parametro = req.body
@@ -33,7 +34,7 @@ router.get( '/:id' , async( req , res ) => {
     }
 })
 
-router.post( '/' , async( req , res ) => {
+router.post( '/' , upload.single('imagen') , async( req , res ) => {
     body = req.body;
     const nuevoArticulo = await agregarArticulo( body );
     res.status(200).send( nuevoArticulo );
